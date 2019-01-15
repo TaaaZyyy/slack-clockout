@@ -6,7 +6,7 @@ IoT Enterprise Button から Slack に退勤時間を投稿する
 ## コンパイル
 ```bash
 $ GOOS=linux go build -o myclockout
-$ $ zip myclockout.zip myclockout
+$ zip myclockout.zip myclockout
 ```
 
 ## 環境変数
@@ -15,8 +15,8 @@ $ $ zip myclockout.zip myclockout
 |SlackURL|https://hooks.slack.com/services/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx|Slack Webhook URL|
 |PrivateChannel|@taaazyyy|シングルクリックで退勤時間を投稿するチャンネル|
 |PublicChannel|#random|ダブルクリックで最終退勤者を投稿するチャンネル|
-|Name|山田 太郎|投稿者名|
-|LastName|山田|最終退勤者報告|
+|Name|田島 太郎|投稿者名|
+|LastName|田島|最終退勤者報告|
 
 ## テストイベント
 * [SINGLE](test/testevent_single.json)
