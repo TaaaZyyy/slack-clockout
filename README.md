@@ -13,6 +13,6 @@ IoT Enterprise Button から Slack に退勤時間を投稿する
 |LastName|山田|最終退勤者報告|
 
 ## テストイベント
-* [SINGLE](testevent_single.json)
-* [DOUBLE](testevent_double.json)
-* [LONG](testevent_long.json)
+* [SINGLE](test/testevent_single.json)
+* [DOUBLE](test/testevent_double.json)
+* [LONG](test/testevent_long.json)
