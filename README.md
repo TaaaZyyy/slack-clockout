@@ -3,6 +3,12 @@ IoT Enterprise Button から Slack に退勤時間を投稿する
 * シングルクリックで退勤時間を投稿する(稼働報告書作成用のメモ)
 * ダブルクリックで最終退勤者報告を投稿する
 
+## コンパイル
+```bash
+$ GOOS=linux go build -o myclockout
+$ $ zip myclockout.zip myclockout
+```
+
 ## 環境変数
 |キー|値|備考|
 |:--|:--|:--|
