@@ -38,11 +38,11 @@ func HandleRequest(ctx context.Context, event MyEvent) (string, error) {
 		sl := slack.NewSlack(slackURL, "退勤時間: " + now, slackName, privatChannel)
 		sl.Send()
 	} else if clicktype == "DOUBLE" {
-		sl := slack.NewSlack(slackURL, "最終退勤者: " + lastName, slackName, publicChannel)
+		sl := slack.NewSlack(slackURL, "ランチタイム開始: " + now, slackName, privatChannel)
 		sl.Send()
 	} else if clicktype == "LONG" {
-		// sl := slack.NewSlack(slackURL, "ロングクリック", "", "")
-		// sl.Send()
+		sl := slack.NewSlack(slackURL, "最終退勤者: " + lastName, slackName, publicChannel)
+		sl.Send()
 	}
 	return "", nil
 }
