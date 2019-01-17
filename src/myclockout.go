@@ -34,17 +34,23 @@ func HandleRequest(ctx context.Context, event MyEvent) (string, error) {
 
 	clicktype := event.DeviceEvent.ButtonClicked.ClickType
 
+	var result string
 	if clicktype == "SINGLE" {
 		sl := slack.NewSlack(slackURL, "退勤時間: " + now, slackName, privatChannel)
 		sl.Send()
+		result = "single"
 	} else if clicktype == "DOUBLE" {
 		sl := slack.NewSlack(slackURL, "ランチタイム開始: " + now, slackName, privatChannel)
 		sl.Send()
+		result = "double"
 	} else if clicktype == "LONG" {
 		sl := slack.NewSlack(slackURL, "最終退勤者: " + lastName, slackName, publicChannel)
 		sl.Send()
+		result = "logn"
+	} else {
+		result = "error"
 	}
-	return "", nil
+	return result, nil
 }
 
 func main() {
